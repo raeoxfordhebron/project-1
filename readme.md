@@ -9,11 +9,12 @@ An online application used to search Animal Crossing villagers and find their st
 - JavaScript
 - jQuery
 - Google Fonts
-- Nookipedia API
+- Nookipedia API: https://api.nookipedia.com/doc
 
 ### Wirefames
 
-![Some text](https://i.imgur.com/UUqfbEo.png)
+![Desktop Wireframe](https://i.imgur.com/UUqfbEo.png)
+![Mobile Wireframe](https://i.imgur.com/LUKjHn6.png)
 
 | Day | Goal |
 |-----|------|
