@@ -1,23 +1,29 @@
-# The Name of My App
+# Animal Crossing Villager Index
 
-a description of my project
+An online application used to search Animal Crossing villagers and find their statistics. 
 
 ### Technologies Used
 
 - CSS
 - HTML
 - JavaScript
-- Jquery
+- jQuery
+- Google Fonts
+- Nookipedia API
 
 ### Wirefames
 
-![Some text](https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg)
+![Some text](https://i.imgur.com/UUqfbEo.png)
 
 | Day | Goal |
 |-----|------|
-|  1  |Choose API |
-|  2  |Render data to screen |
-|  3  | Create form |
+|  1  | Choose API |
+|  2  | Render data to screen |
+|  3  | Create search box for Animal Crossing villager name and version of the game |
+|  4  | Style with CSS |
+|  5  | List of similar villagers |
+|  6  | List of similar villagers or villager statistic search |
+|  7  | Present! |
 
 ### Link to Project
-[My Project Live Page](https://www.google.com)
+[My Project Live Page](https://raeoxfordhebron.github.io/project-1/)
