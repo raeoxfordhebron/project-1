@@ -10,11 +10,12 @@ const $main = $("main")
 const $villagerTextName = $("#villagerTextName")
 const $villagerName = $("#villagerName")
 const $quote = $("#quote")
-const $birthdayMonth = $("#birthdayMonth")
+const $birthday = $("#birthday")
 const $image = $("#image")
 const $clothing = $("#clothing")
 const $species = $("#species")
-const $sign = $("sign")
+const $sign = $("#sign")
+const $personality = $("#personality")
 
 
 // function that does villager search
@@ -28,12 +29,13 @@ function villagerSearch(name) {
         // $main.empty()
         // render data onto DOM
         $villagerName.text(`Villager Name: ${data[0].name}`)
-        $birthdayMonth.text(`Birthday Month: ${data[0].birthday_month}`)
+        $birthday.text(`Birthday: ${data[0].birthday_month} ${data[0].birthday_day}`)
         $quote.text(`"${data[0].quote}"`)
         $image.html(`<img src="${data[0].image_url}">`)
         $clothing.text(`Clothing Choice: ${data[0].clothing}`)
         $species.text(`Species: ${data[0].species}`)
         $sign.text(`Astrological Sign: ${data[0].sign}`)
+        $personality.text(`Personality: ${data[0].personality}`)
     })
 }
 

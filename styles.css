@@ -1,10 +1,42 @@
 body {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 2fr 2fr;
+    box-sizing: border-box;
+}
+
+header {
+    margin: auto;
 }
 
 #image {
-    height: 100px;
-    width: 100px;
+    background-color: cornflowerblue;
+}
+
+#birthday {
+    background-color: blue;
+}
+
+#clothing {
+    background-color: red;
+}
+
+#quote {
+    background-color: green;
+}
+
+#species {
+    background-color: purple;
+}
+
+#sign {
+    background-color: grey;
+}
+
+#personality {
+    background-color: yellow;
+}
+
+#imageContainer {
+    background-color: forestgreen;
+    margin: auto;
 }
