@@ -4,3 +4,7 @@ body {
     grid-template-rows: 1fr 2fr;
 }
 
+#image {
+    height: 100px;
+    width: 100px;
+}

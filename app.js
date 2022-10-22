@@ -37,6 +37,11 @@ function villagerSearch(name) {
     })
 }
 
+// grab submit and add click event
+$("input[type=submit]").on("click", (event) => {
+    event.preventDefault();
+    const inputText = $villagerTextName.val()
+    villagerSearch(inputText) // function is grabbing the name
+})
 
-
-villagerSearch("Bob")
+// villagerSearch("Bob")
