@@ -1,15 +1,29 @@
 body {
     display: grid;
-    grid-template-columns: 2fr 2fr;
-    box-sizing: border-box;
+    background-color: #A7D2CB;
 }
 
 header {
     margin: auto;
+    text-align: center;
+    
+}
+
+main {
+    width: 60%;
+    background-color: #F2D388;
+    border: 3px solid black;
+    margin: auto;
+    border-radius: 5px;
 }
 
 #image {
     background-color: cornflowerblue;
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
 }
 
 #birthday {
@@ -36,7 +50,23 @@ header {
     background-color: yellow;
 }
 
-#imageContainer {
-    background-color: forestgreen;
-    margin: auto;
+
+form {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+#submitButton {
+    background-color: #874C62;
+    color: white;
+    border-radius: 3px;
+    height: 25px;
+    transition: background-color .3s, color .3s
+}
+
+#submitButton:hover {
+    background-color: #54BAB9;
+    color: white;
+    cursor: pointer;
 }

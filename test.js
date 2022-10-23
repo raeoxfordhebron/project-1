@@ -18,10 +18,7 @@ function showSimilarVillagers(personality) {
             }
         })
         console.log(speciesArray)
-        const filterSpecies = speciesArray.filter((element, index) => {
-            element.species === "Bear"
-        })
-        
+        ajaxCall2(data.species)
 })
 }
 
