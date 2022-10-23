@@ -18,7 +18,8 @@ function showSimilarVillagers(personality) {
             }
         })
         console.log(speciesArray)
-        ajaxCall2(data.species)
+        const filterVersion = speciesArray.filter((element) => element.species === "bear")
+        console.log(filterVersion)
 })
 }
 

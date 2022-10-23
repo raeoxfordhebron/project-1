@@ -16,6 +16,7 @@ const $clothing = $("#clothing")
 const $species = $("#species")
 const $sign = $("#sign")
 const $personality = $("#personality")
+const $appearances = $("#appearances")
 
 
 // function that does villager search
@@ -36,6 +37,7 @@ function villagerSearch(name) {
         $species.text(`Species: ${data[0].species}`)
         $sign.text(`Astrological Sign: ${data[0].sign}`)
         $personality.text(`Personality: ${data[0].personality}`)
+        $appearances.text(`Present in ${data[0].appearances}`)
     })
 }
 
@@ -46,4 +48,3 @@ $("input[type=submit]").on("click", (event) => {
     villagerSearch(inputText) // function is grabbing the name
 })
 
-// villagerSearch("Bob")
