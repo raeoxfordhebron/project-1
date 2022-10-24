@@ -1,8 +1,13 @@
 body {
-    display: flex;
+    display: grid;
     background-color: #A7D2CB;
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer"
+    
 }
 
 header {
@@ -10,7 +15,7 @@ header {
     text-align: center;
     font-family: 'Libre Baskerville', serif;
     font-weight: bold;
-    justify-content: center;
+    grid-area: header;
 }
 
 main {
@@ -21,16 +26,24 @@ main {
     border-radius: 5px;
     font-family: 'Noto Serif', serif;
     font-size: 15px;
+    grid-area: main;
 }
 
 #image {
     background-color: cornflowerblue;
     display: block;
     margin: 20px auto;
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 400px;
     object-fit: cover;
+    grid-area: sidebar;
 }
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
 
 #birthday {
     background-color: blue;
@@ -58,9 +71,9 @@ main {
 
 
 form {
-    text-align: center;
     padding: 10px;
     margin: 10px;
+    grid-area: header;
 }
 
 #submitButton {
