@@ -35,13 +35,12 @@ function villagerSearch(name) {
         // render data onto DOM
         $villagerName.text(`Villager Name: ${data[0].name}`)
         $birthday.text(`Birthday: ${data[0].birthday_month} ${data[0].birthday_day}`)
-        $quote.text(`"${data[0].quote}"`)
+        $quote.text(`Quote: "${data[0].quote}"`)
         $image.html(`<img src="${data[0].image_url}">`)
-        $clothing.text(`Clothing Choice: ${data[0].clothing}`)
+        $clothing.text(`Favorite Clothing: ${data[0].clothing}`)
         $species.text(`Species: ${data[0].species}`)
         $sign.text(`Astrological Sign: ${data[0].sign}`)
         $personality.text(`Personality: ${data[0].personality}`)
-        // experimenting to add hover links
         // grab single elements
         data[0].appearances.forEach((element, index) => {
             const newP = $(`<li id='${element}'>`).text(element)
@@ -71,5 +70,6 @@ function similarVillagers(personality) {
         })
     })
 }
+
 
 
