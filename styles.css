@@ -1,12 +1,12 @@
 body {
     display: grid;
     background-color: #A7D2CB;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
     grid-template-areas: 
-    "header header header header"
-    "main main . sidebar"
-    "footer footer footer footer"
+    "header header header"
+    "main sidebar sidebar"
+    "main footer footer"
     
 }
 
@@ -54,7 +54,7 @@ main {
     width: 400px;
     background-color: #F2D388;
     border: 5px solid #874C62;
-    margin: auto;
+    margin: 0 0 300px 200px;
     border-radius: 5px;
     font-family: 'Noto Serif', serif;
     font-size: 15px;
@@ -67,7 +67,7 @@ main {
     border: 5px solid #874C62;
     border-radius: 5px;
     display: block;
-    margin: 20px 40px;
+    margin: 20px 600px;
     width: 300px;
     height: 500px;
     object-fit: cover;
@@ -108,6 +108,7 @@ aside {
     display: flex;
     flex-wrap: wrap;
     grid-area: footer;
+    max-width: 1000px;
 }
 
 aside > h3 {
@@ -125,11 +126,11 @@ aside > h3 {
     color: white;
 }
 
-#doubutsu:hover{
+#DNM:hover{
     position: relative;
 }
 
-#doubutsu:hover:after {
+#DNM:hover:after {
     content: url(https://nookipedia.com/wiki/Doubutsu_no_Mori#/media/File:DnM_Box.jpg);
     display: block;
     position: absolute;

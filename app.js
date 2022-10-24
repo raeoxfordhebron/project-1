@@ -44,7 +44,7 @@ function villagerSearch(name) {
         // experimenting to add hover links
         // grab single elements
         data[0].appearances.forEach((element, index) => {
-            const newP = $("<li>").text(element)
+            const newP = $(`<li id='${element}'>`).text(element)
             $appearances.append(newP)
         })
         similarVillagers(data[0].personality)
@@ -72,8 +72,4 @@ function similarVillagers(personality) {
     })
 }
 
-// trying to add conditionals to appearances
 
-if($listOfAppearances === "DNM"){
-    $listOfAppearances.addClass("doubutsu")
-}
