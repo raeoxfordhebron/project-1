@@ -58,5 +58,9 @@ function similarVillagers(personality) {
     headers: {"X-API-KEY": `${apiKey}`}})
     .then((data) => {
         console.log(data)
+        data.forEach((element, index) => {
+            console.log(element)
+            $("aside").append(`${element.name}, (${element.species}) `)
+        })
     })
 }
