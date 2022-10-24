@@ -60,7 +60,8 @@ function similarVillagers(personality) {
         console.log(data)
         data.forEach((element, index) => {
             console.log(element)
-            $("aside").append(`${element.name}, (${element.species}) `)
+            const newLi = $("<li>").text(`${element.name} (${element.species}) `)
+            $("aside").append(newLi)
         })
     })
 }
