@@ -18,6 +18,9 @@ const $sign = $("#sign")
 const $personality = $("#personality")
 const $appearances = $("#appearances")
 
+// save some more variables
+let personality
+
 
 // function that does villager search
 function villagerSearch(name) {
@@ -38,6 +41,7 @@ function villagerSearch(name) {
         $sign.text(`Astrological Sign: ${data[0].sign}`)
         $personality.text(`Personality: ${data[0].personality}`)
         $appearances.text(`Present in ${data[0].appearances}`)
+        similarVillagers(data[0].personality)
     })
 }
 
@@ -48,3 +52,11 @@ $("input[type=submit]").on("click", (event) => {
     villagerSearch(inputText) // function is grabbing the name
 })
 
+function similarVillagers(personality) {
+    $.ajax({
+    url: `${baseURL}villagers?personality=${personality}`,
+    headers: {"X-API-KEY": `${apiKey}`}})
+    .then((data) => {
+        console.log(data)
+    })
+}
