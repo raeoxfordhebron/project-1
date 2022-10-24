@@ -1,8 +1,8 @@
 body {
     display: grid;
     background-color: #A7D2CB;
-    grid-template-columns: 50px 50px 50px 50px;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "header header header header"
     "main main . sidebar"
@@ -19,9 +19,9 @@ header {
 }
 
 main {
-    width: 60%;
+    width: 400px;
     background-color: #F2D388;
-    border: 3px solid black;
+    border: 5px solid black;
     margin: auto;
     border-radius: 5px;
     font-family: 'Noto Serif', serif;
@@ -30,7 +30,9 @@ main {
 }
 
 #image {
-    background-color: cornflowerblue;
+    background-color: #C98474;
+    border: 5px solid black;
+    border-radius: 5px;
     display: block;
     margin: 20px auto;
     width: 250px;
