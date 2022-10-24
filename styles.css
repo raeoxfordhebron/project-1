@@ -50,6 +50,18 @@ header {
     transform: scaleX(-1);
 }
 
+#blueCircle {
+    height: 300px;
+    width: 300px;
+    background-color: #54BAB9;
+    border-radius: 50%;
+    display: inline-block;
+    grid-area: header;
+    margin: 100px 300px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
 main {
     width: 400px;
     background-color: #F2D388;
