@@ -24,6 +24,32 @@ header {
     background-color: #F2D388;
 }
 
+#logo1 {
+    width: 100px;
+    height: 100px;
+    grid-area: header;
+    margin: 50px 550px; 
+}
+
+#logo1 img {
+    width: 100%;
+    height: 100%
+}
+
+#logo2 {
+    grid-area: header;
+    width: 50px;
+    height: 50px;
+    margin: 50px 1300px; 
+}
+
+#logo2 img {
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
 main {
     width: 400px;
     background-color: #F2D388;
@@ -92,5 +118,21 @@ aside > h3 {
     background-color: #C98474;
     color: white;
     height: 25px;
+    border: 2px solid black;
 }
 
+::placeholder {
+    color: white;
+}
+
+#doubutsu:hover{
+    position: relative;
+}
+
+#doubutsu:hover:after {
+    content: url(https://nookipedia.com/wiki/Doubutsu_no_Mori#/media/File:DnM_Box.jpg);
+    display: block;
+    position: absolute;
+    left: 123px;
+    top: 56px;
+}

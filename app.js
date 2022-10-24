@@ -17,9 +17,10 @@ const $species = $("#species")
 const $sign = $("#sign")
 const $personality = $("#personality")
 const $appearances = $("#appearances")
+const $listOfAppearances = $("#appearances li")
 
 // save some more variables
-let personality
+let personality;
 
 
 // function that does villager search
@@ -40,7 +41,12 @@ function villagerSearch(name) {
         $species.text(`Species: ${data[0].species}`)
         $sign.text(`Astrological Sign: ${data[0].sign}`)
         $personality.text(`Personality: ${data[0].personality}`)
-        $appearances.text(`Present in ${data[0].appearances}`)
+        // experimenting to add hover links
+        // grab single elements
+        data[0].appearances.forEach((element, index) => {
+            const newP = $("<li>").text(element)
+            $appearances.append(newP)
+        })
         similarVillagers(data[0].personality)
     })
 }
@@ -64,4 +70,10 @@ function similarVillagers(personality) {
             $("aside").append(newLi)
         })
     })
+}
+
+// trying to add conditionals to appearances
+
+if($listOfAppearances === "DNM"){
+    $listOfAppearances.addClass("doubutsu")
 }
