@@ -18,6 +18,7 @@ const $sign = $("#sign")
 const $personality = $("#personality")
 const $appearances = $("#appearances")
 const $listOfAppearances = $("#appearances li")
+const $aside = $("aside")
 
 // save some more variables
 let personality;
@@ -31,8 +32,13 @@ function villagerSearch(name) {
     })
     .then((data) => {
         console.log(data)
-        // $main.empty()
+        $appearances.empty()
+        $aside.empty()
         // render data onto DOM
+        // render()
+        if(!data.length){
+            alert("That is not the name of an Animal Crossing Villager. Please choose a different name.")
+        }
         $villagerName.text(`Villager Name: ${data[0].name}`)
         $birthday.text(`Birthday: ${data[0].birthday_month} ${data[0].birthday_day}`)
         $quote.text(`Quote: "${data[0].quote}"`)
@@ -44,10 +50,10 @@ function villagerSearch(name) {
         // grab single elements
         data[0].appearances.forEach((element, index) => {
             const newP = $(`<li id='${element}'>`).text(element)
-            $appearances.append(newP)
+            return $appearances.append(newP)
         })
         similarVillagers(data[0].personality)
-    })
+    }) 
 }
 
 // grab submit and add click event
@@ -57,19 +63,37 @@ $("input[type=submit]").on("click", (event) => {
     villagerSearch(inputText) // function is grabbing the name
 })
 
+// show villagers by personality
 function similarVillagers(personality) {
     $.ajax({
     url: `${baseURL}villagers?personality=${personality}`,
     headers: {"X-API-KEY": `${apiKey}`}})
     .then((data) => {
-        console.log(data)
         data.forEach((element, index) => {
             console.log(element)
-            const newLi = $("<li>").text(`${element.name} (${element.species}) `)
+            const newLi = $("<li>").text(` ${element.name} (${element.species})`)
             $("aside").append(newLi)
         })
     })
 }
 
 
+// trying to search for villagers by species
 
+function villagerSpecies(species){
+    $.ajax({
+        url: `${baseURL}villagers?species=${species}`,
+        headers: {"X-API-KEY": `${apiKey}`}
+    })
+    .then((data) => {
+        console.log(data)
+        $main.empty()
+        data.forEach((element, index) => {
+            console.log(element)
+            const speciesLi = $("<li>").text(`${element.name}`)
+            $main.append(speciesLi)
+        })   
+    })
+}
+
+villagerSpecies("bear")

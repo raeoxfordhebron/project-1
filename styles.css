@@ -1,4 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+
 body {
+    width: 90%;
+    margin: 2em auto; 
     display: grid;
     background-color: #A7D2CB;
     /* grid-template-columns: 1fr 1fr;
@@ -6,7 +13,7 @@ body {
     grid-template-areas: 
     "header header header"
     "main sidebar sidebar"
-    "main footer footer"
+    "footer footer footer"
     
 }
 
@@ -100,10 +107,10 @@ header {
 
 main {
     width: 500px;
-    height: 500px;
+    height: 600px;
     background-color: #F2D388;
     border: 5px solid #874C62;
-    margin: 0 0 300px 200px;
+    margin: 10px 0 300px 200px;
     border-radius: 5px;
     font-family: 'Noto Serif', serif;
     font-size: 15px;
@@ -116,9 +123,7 @@ main {
     border: 5px solid #874C62;
     border-radius: 5px;
     display: block;
-    margin: 0 0 10px 300px;
-    width: 500px;
-    height: 800px;
+    margin: 0 100px 100px 300px;
     object-fit: cover;
     grid-area: sidebar;
 }
@@ -130,12 +135,12 @@ img {
 
 #labelForForm {
     grid-area: header;
-    margin: 450px 0 0 200px;
+    margin: 275px 0 0 675px;
 }
 
 form {
     padding: 10px;
-    margin: 475px 0 0 325px;
+    margin: 300px 0 0 800px;
     grid-area: header;
 }
 
@@ -161,11 +166,23 @@ aside {
     display: flex;
     flex-wrap: wrap;
     grid-area: footer;
-    max-width: 1000px;
+    height: 225px;
 }
 
-aside > h3 {
-    text-align: center;
+#label {
+   font-size: 1.5em;
+   position: absolute;
+   left: 80px;
+   top: 1300px;
+   border: 3px solid #874C62;
+   background-color: #C98474;
+   color: white;
+   padding: 5px;
+   border-radius: 3px;
+}
+
+li {
+    list-style-type: none;
 }
 
 #villagerTextName {
@@ -179,14 +196,15 @@ aside > h3 {
     color: white;
 }
 
-#DNM:hover{
-    position: relative;
-}
+@media screen and (min-width: 300px) and (max: 500px) {
+    body {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 20px;
+    }
 
-#DNM:hover:after {
-    content: url(https://nookipedia.com/wiki/Doubutsu_no_Mori#/media/File:DnM_Box.jpg);
-    display: block;
-    position: absolute;
-    left: 123px;
-    top: 56px;
+    header {
+        display: flex;
+        flex: 1;
+    }
 }
