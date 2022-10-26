@@ -138,6 +138,12 @@ img {
     margin: 275px 0 0 675px;
 }
 
+#species {
+    grid-area: header;
+    width: 15vw;
+    height: 3vw;
+}
+
 form {
     padding: 10px;
     margin: 300px 0 0 800px;

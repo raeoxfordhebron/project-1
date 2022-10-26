@@ -13,12 +13,14 @@ const $quote = $("#quote")
 const $birthday = $("#birthday")
 const $image = $("#image")
 const $clothing = $("#clothing")
-const $species = $("#species")
+const $villagerSpecies = $("#villagerSpecies")
 const $sign = $("#sign")
 const $personality = $("#personality")
 const $appearances = $("#appearances")
 const $listOfAppearances = $("#appearances li")
 const $aside = $("aside")
+const $species = $("#species")
+const $listOfSpecies = $("main li")
 
 // save some more variables
 let personality;
@@ -44,7 +46,7 @@ function villagerSearch(name) {
         $quote.text(`Quote: "${data[0].quote}"`)
         $image.html(`<img src="${data[0].image_url}">`)
         $clothing.text(`Favorite Clothing: ${data[0].clothing}`)
-        $species.text(`Species: ${data[0].species}`)
+        $villagerSpecies.text(`Species: ${data[0].species}`)
         $sign.text(`Astrological Sign: ${data[0].sign}`)
         $personality.text(`Personality: ${data[0].personality}`)
         // grab single elements
@@ -96,4 +98,19 @@ function villagerSpecies(species){
     })
 }
 
-villagerSpecies("bear")
+// grab dropdown
+
+$("#species").change(function (event){
+    const inputText = $species.val()
+    villagerSpecies(inputText)
+})
+
+// grab click event on villager names from species type
+
+$(function() {
+    $(document).on("click","main li", function(e){
+        const inputText = $("main li").text();
+        console.log(inputText)
+        villagerSearch(inputText)
+    })
+})
