@@ -90,6 +90,7 @@ function villagerSpecies(species){
     .then((data) => {
         console.log(data)
         $("main p").empty()
+        $("main li").remove()
         data.forEach((element, index) => {
             console.log(element)
             const speciesLi = $("<li>").text(`${element.name}`)
@@ -97,10 +98,9 @@ function villagerSpecies(species){
                 const inputText = e.target.textContent
                 $("main p").empty()
                 $("main li").remove()
-                // $("<main>")
                 villagerSearch(inputText)
             })
-            $main.append(speciesLi)
+            $("main").append(speciesLi)
         })   
     })
 }

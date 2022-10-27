@@ -1,60 +1,43 @@
-* {
-    box-sizing: border-box;
-}
-
-
 body {
     width: 90%;
     margin: 2em auto; 
     display: grid;
     background-color: #A7D2CB;
-    /* grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr; */
     grid-template-areas: 
     "header header header"
-    "main sidebar sidebar"
+    "main main sidebar"
+    "main main sidebar"
+    "main main sidebar"
+    "main main sidebar"
+    "footer footer footer"
     "footer footer footer"
     
 }
 
 header {
-    margin: 10px 0px 0 475px;
-    height: 150px;
     text-align: center;
     font-family: 'Libre Baskerville', serif;
     font-weight: bold;
     grid-area: header;
     border: 3px solid #874C62;
     border-radius: 5px;
-    padding: 20px;
-    width: 900px;
+    padding: 2px;
     background-color: #F2D388;
+    margin: 50px auto;
+    width: 70%;
+    height: 30%;
 }
 
 #logo1 {
     width: 100px;
     height: 100px;
-    grid-area: header;
-    margin: 50px 0 0 550px; 
+    grid-area: header; 
+    margin: 60px 300px;
 }
 
 #logo1 img {
     width: 100%;
     height: 100%
-}
-
-#logo2 {
-    grid-area: header;
-    width: 50px;
-    height: 50px;
-    margin: 50px 0 0 1300px ; 
-}
-
-#logo2 img {
-    width: 100%;
-    height: 100%;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
 }
 
 #blueCircle {
@@ -64,7 +47,7 @@ header {
     border-radius: 50%;
     display: inline-block;
     grid-area: header;
-    margin: 100px 0 0 300px;
+    margin: 100px 0 0 30px;
     opacity: 0.5;
     z-index: -1;
 }
@@ -106,16 +89,17 @@ header {
 
 
 main {
-    width: 500px;
-    height: 600px;
     background-color: #F2D388;
     border: 5px solid #874C62;
-    margin: 10px 0 300px 200px;
     border-radius: 5px;
     font-family: 'Noto Serif', serif;
     font-size: 15px;
     grid-area: main;
     padding: 20px;
+    height: 500px;
+    margin: auto;
+    width: 50%;
+    height: 90%;
 }
 
 #image {
@@ -123,10 +107,10 @@ main {
     border: 5px solid #874C62;
     border-radius: 5px;
     display: block;
-    margin: 0 100px 100px 300px;
     object-fit: cover;
     grid-area: sidebar;
     padding: 15px;
+    width: 50%;
 }
 
 img {
@@ -136,19 +120,25 @@ img {
 
 #labelForForm {
     grid-area: header;
-    margin: 275px 0 0 675px;
+    transform: translate(500px, 200px)
+}
+
+label {
+    grid-area: header;
+    transform: translate(500px, 350px)
 }
 
 #species {
     grid-area: header;
     width: 15vw;
-    height: 3vw;
+    height: 4vw;
+    transform: translate(700px, 350px)
 }
 
 form {
     padding: 10px;
-    margin: 300px 0 0 800px;
     grid-area: header;
+    transform: translate(650px, 250px)
 }
 
 #submitButton {
@@ -170,27 +160,32 @@ aside {
     border: 5px solid #874C62;
     border-radius: 3px;
     padding: 10px;
+    grid-area: footer;
+    height: 80%;
+    width: 100%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
-    grid-area: footer;
-    height: 225px;
+    margin: 100px auto;
+}
+
+aside li {
+    list-style-type: none;
 }
 
 #label {
    font-size: 1.5em;
-   position: absolute;
-   left: 80px;
-   top: 1300px;
    border: 3px solid #874C62;
    background-color: #C98474;
    color: white;
    padding: 5px;
    border-radius: 3px;
+   grid-area: footer;
+   height: 10%;
+   width: 30%;
 }
 
-li {
-    list-style-type: none;
-}
+
 
 #villagerTextName {
     background-color: #C98474;
@@ -203,19 +198,33 @@ li {
     color: white;
 }
 
-@media screen and (min-width: 300px) and (max: 500px) {
+@media screen and (min-width: 300px) and (max-width: 500px) {
     body {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        column-gap: 20px;
+        grid-template-areas: 
+        "header"
+        "main"
+        "main"
+        "main"
+        "sidebar"
+        "sidebar"
+        "footer";
     }
 
     header {
-        display: flex;
-        flex: 1;
+       grid-area: header;
     }
+
+    main {
+        grid-area: main;
+    }
+
+    aside {
+        grid-area: sidebar;
+    }
+
 }
 
 main li:hover {
     cursor: pointer;
 }
+
