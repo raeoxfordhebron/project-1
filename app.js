@@ -36,6 +36,7 @@ function villagerSearch(name) {
         console.log(data)
         $appearances.empty()
         $aside.empty()
+        // $main.empty()
         // render data onto DOM
         // render()
         if(!data.length){
@@ -72,7 +73,6 @@ function similarVillagers(personality) {
     headers: {"X-API-KEY": `${apiKey}`}})
     .then((data) => {
         data.forEach((element, index) => {
-            console.log(element)
             const newLi = $("<li>").text(` ${element.name} (${element.species})`)
             $("aside").append(newLi)
         })
@@ -89,10 +89,17 @@ function villagerSpecies(species){
     })
     .then((data) => {
         console.log(data)
-        $main.empty()
+        $("main p").empty()
         data.forEach((element, index) => {
             console.log(element)
             const speciesLi = $("<li>").text(`${element.name}`)
+            speciesLi.click(function(e){
+                const inputText = e.target.textContent
+                $("main p").empty()
+                $("main li").remove()
+                // $("<main>")
+                villagerSearch(inputText)
+            })
             $main.append(speciesLi)
         })   
     })
@@ -107,10 +114,4 @@ $("#species").change(function (event){
 
 // grab click event on villager names from species type
 
-$(function() {
-    $(document).on("click","main li", function(e){
-        const inputText = $("main li").text();
-        console.log(inputText)
-        villagerSearch(inputText)
-    })
-})
+
