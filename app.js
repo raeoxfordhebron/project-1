@@ -112,6 +112,6 @@ $("#species").change(function (event){
     villagerSpecies(inputText)
 })
 
-// grab click event on villager names from species type
+
 
 

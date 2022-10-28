@@ -120,25 +120,29 @@ img {
 
 #labelForForm {
     grid-area: header;
-    transform: translate(500px, 200px)
+    transform: translate(500px, 200px);
+    width: 40%;
 }
 
 label {
     grid-area: header;
-    transform: translate(500px, 350px)
+    transform: translate(500px, 350px);
+    width: 10%;
 }
 
 #species {
     grid-area: header;
-    width: 15vw;
-    height: 4vw;
-    transform: translate(700px, 350px)
+    width: 100px;
+    height: 30px;
+    transform: translate(675px, 350px)
 }
 
 form {
     padding: 10px;
     grid-area: header;
-    transform: translate(650px, 250px)
+    position: relative;
+    transform: translate(650px, 250px);
+    width: 15%;
 }
 
 #submitButton {
@@ -198,6 +202,10 @@ aside li {
     color: white;
 }
 
+main li:hover {
+    cursor: pointer;
+}
+
 @media screen and (min-width: 300px) and (max-width: 500px) {
     body {
         grid-template-areas: 
@@ -212,19 +220,28 @@ aside li {
 
     header {
        grid-area: header;
+       width: 100%;
     }
 
     main {
         grid-area: main;
     }
 
-    aside {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #image {
         grid-area: sidebar;
+        margin: 25px auto;
+    }
+
+
+    aside {
+        grid-area: footer;
     }
 
 }
 
-main li:hover {
-    cursor: pointer;
-}
 
