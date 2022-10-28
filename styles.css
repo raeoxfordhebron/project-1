@@ -225,6 +225,7 @@ main li:hover {
 
     main {
         grid-area: main;
+        margin: 60px auto;
     }
 
     img {
@@ -234,12 +235,69 @@ main li:hover {
 
     #image {
         grid-area: sidebar;
-        margin: 25px auto;
+        margin: 100px auto;
     }
 
 
     aside {
         grid-area: footer;
+        width: 70%;
+    }
+    
+    #blueCircle {
+        display: none;
+    }
+
+    #maroonCircle {
+        display: none;
+    }
+
+    #secondMaroonCircle {
+        display: none;
+    }
+
+    #orangeCircle {
+        display: none;
+    }
+
+    #labelForForm {
+        grid-area: header;
+        transform: translate(140px, 130px);
+        width: 75%;
+    }
+
+    label {
+        grid-area: header;
+        transform: translate(200px, 230px)
+    }
+
+    #villagerTextName {
+        grid-area: header;
+        transform: translate(-400px, -75px)
+    }
+
+    #submitButton {
+        grid-area: header;
+        transform: translate(-220px, -105px)
+    }
+
+    #label {
+        grid-area: footer;
+        height: 20%;
+        width: 60%;
+        margin: 0 100px;
+    }
+
+    #logo1 img {
+        grid-area: header;
+        width: 50%;
+        height: 50%;
+        margin: 0 -275px;
+    }
+
+    #species{
+        grid-area: header;
+        transform: translate(300px, 230px)
     }
 
 }
